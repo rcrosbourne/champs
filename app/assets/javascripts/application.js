@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap
+//= require underscore
+//= require angular
+//= require angular-route
+//= require angular-resource
+//= require toastr
+//= require smartadmin
+//= require smart-notification
+//= require jarvis.widget

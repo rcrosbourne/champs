@@ -1,0 +1,38 @@
+<header id="header"><h3 class="pull-right">LimeWare Demo Portal</h3></header>
+<div class="container animated fadeInDown">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+			<div class="well no-padding">
+				<form name="loginForm" class="smart-form client-form" ng-submit="loginUser()">
+					<header>
+						Sign In
+					</header>
+					<fieldset>
+						<section>
+							<label class="label">Username</label>
+							<label class="input" ng-class="{'state-error':loginForm.$dirty && loginForm.username.$error.required, 'state-success': !loginForm.username.$error.required && loginForm.$dirty}"> <i class="icon-append fa fa-user"></i>
+								<input type="text" name="username" ng-model="username" required>
+								<b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter username</b></label>
+							<em ng-show="loginForm.$dirty && loginForm.email.$error.required" for="email" class="state-error invalid">Username is required</em>
+						</section>
+
+						<section>
+							<label class="label">Password</label>
+							<label class="input" ng-class="{'state-error':loginForm.password.$dirty && loginForm.password.$error.required, 'state-success': !(loginForm.password.$error.required) && loginForm.password.$dirty}"> <i class="icon-append fa fa-lock"></i>
+								<input type="password" name="password" ng-model="password" required>
+								<b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b> </label>
+								<em ng-show="loginForm.password.$dirty && loginForm.password.$error.required" for="password" class="state-error invalid">Password is required</em>
+						</section>
+						
+					</fieldset>
+					<footer>
+						<button type="submit" class="btn btn-primary" ng-disabled="!(loginForm.username.$valid && loginForm.password.$valid)">
+							Sign in
+						</button>
+					</footer>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>

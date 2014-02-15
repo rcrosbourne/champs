@@ -1,6 +1,10 @@
 Champs::Application.routes.draw do
-  root 'static_pages#index'
-  resources :users
+  root 'main#index'
+  resources :users #, defaults: {format: :json}
+  
+  get 'session/current_user' => 'sessions#current_user'
+  post 'session/login' => 'sessions#login'
+  delete 'session/logout' => 'sessions#logout'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

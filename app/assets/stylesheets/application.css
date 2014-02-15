@@ -11,6 +11,7 @@
  *= require bootstrap
  *= require font-awesome
  *= require google-font
+ *= require toastr
  *= require smartadmin
  *= require_self
  *= require_tree .
